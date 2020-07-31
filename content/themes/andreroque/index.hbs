@@ -1,10 +1,52 @@
 {{!< default}}
 
+<style>
+    .feed {
+        -webkit-box-align: center;
+        align-items: center;
+        display: -webkit-box;
+        display: flex;
+        line-height: 1;
+        overflow: hidden;
+        padding: 0.8rem 0;
+        position: relative;
+    }
+
+    .feed-calendar {
+        color: #BF616A;
+        display: -webkit-box;
+        display: flex;
+        font-size: 0.8rem;
+        font-weight: 800;
+        margin-right: 1.5rem;
+        white-space: nowrap;
+    }
+
+    a {
+        color: #2E3440;
+        text-decoration: none;
+        -webkit-transition: color 0.1s var(--animation-base);
+        transition: color 0.1s var(--animation-base);
+    }
+
+    a:hover {
+        text-decoration: none;
+    }
+</style>
+
 <main>
     {{#foreach posts}}
-    {{date format="DD MMMM YY"}} <span class="badge badge-secondary">{{ tags autolink="false"}}</span>
-    <a href="{{url}}">{{ title }}</a>
-    <hr>
+    <article class="feed">
+
+        <div class="feed-calendar">
+            {{date format="MMMM DD"}}
+        </div>
+
+        <a href="{{url}}"> <span class="badge badge-secondary">{{ tags autolink="false"}}</span>
+            {{ title }}</a>
+    </article>
+
+
 
     {{/foreach}}
 </main>
