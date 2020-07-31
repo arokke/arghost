@@ -2,6 +2,7 @@
 
 <main>
     {{#foreach posts}}
+            {{date format="DD MMMM YYYY"}} // {{ tags }}
     <h1><a href="{{url}}">{{ title }}</a></h1>
 
     {{/foreach}}
