@@ -2,8 +2,9 @@
 
 <main>
     {{#foreach posts}}
-            {{date format="DD MMMM YYYY"}} // {{ tags }}
-    <h1><a href="{{url}}">{{ title }}</a></h1>
+    {{date format="DD MMMM YY"}} <span class="badge badge-secondary">{{ tags autolink="false"}}</span>
+    <a href="{{url}}">{{ title }}</a>
+    <hr>
 
     {{/foreach}}
 </main>
