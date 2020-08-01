@@ -22,7 +22,7 @@
         white-space: nowrap;
     }
 
-    .postlist a {
+    a {
         color: #2E3440;
         text-decoration: none;
         -webkit-transition: background 1s;
@@ -31,12 +31,25 @@
         /* For modern browsers */
     }
 
-    .postlist a:hover {
+    a:hover {
         color: #2E3440;
         text-decoration: none;
         background: #D8DEE9;
     }
+    .postlist {
+        color: #2E3440;
+        text-decoration: none;
+        -webkit-transition: background 1s;
+        /* For Safari 3.0 to 6.0 */
+        transition: background 1s;
+        /* For modern browsers */
+    }
 
+    .postlist:hover {
+        color: #2E3440;
+        text-decoration: none;
+        background: #D8DEE9;
+    }
     .icon {
         height: 20px;
         width: 20px;
@@ -55,8 +68,8 @@
     <h3>Second brain entries</h3>
     <div class="kg-width-normal">
         {{#foreach posts}}
-        <a href="{{url}}" class="postlist">
-            <article class="feed">
+        <a href="{{url}}">
+            <article class="feed postlist">
                 {{!-- Post date --}}
                 <div class="feed-calendar">
                     {{date format="MMMM DD"}}
