@@ -13,11 +13,10 @@
     }
 
     .feed-calendar {
-        color: #BF616A;
+        color: #4C566A;
         display: -webkit-box;
         display: flex;
         font-size: 0.8rem;
-        font-weight: 800;
         margin-right: 1.5rem;
         white-space: nowrap;
     }
@@ -25,17 +24,12 @@
     a {
         color: #2E3440;
         text-decoration: none;
-        -webkit-transition: background 1s;
-        /* For Safari 3.0 to 6.0 */
-        transition: background 1s;
-        /* For modern browsers */
     }
 
     a:hover {
-        color: #2E3440;
         text-decoration: none;
-        background: #D8DEE9;
     }
+
     .postlist {
         color: #2E3440;
         text-decoration: none;
@@ -45,10 +39,11 @@
         /* For modern browsers */
     }
 
-    .postlist:hover{
+    .postlist:hover {
         color: #2E3440;
         text-decoration: none;
         background: #D8DEE9;
+        font-weight: 600;
     }
 
     .icon {
@@ -59,50 +54,58 @@
     .feed-icon {
         color: #BF616A;
         height: 16px;
-        position: absolute;
         right: 0;
         width: 16px;
     }
 
-    .svgarrow{
-        display: none;
+    .posthr {
+        margin: 0;
     }
 
+    .col {
+        display: flex;
+    }
+    .headercolor{
+        color: #4C566A;
+    }
 </style>
 
 <main>
-    <h3>Second brain entries</h3>
-    <div class="kg-width-normal">
+    <h3 class="headercolor">Second brain entries</h3>
+    <hr>
+    <div class="container">
         {{#foreach posts}}
         <a href="{{url}}">
-            <article class="feed postlist">
+            <article class="feed postlist row">
                 {{!-- Post date --}}
-                <div class="feed-calendar">
-                    {{date format="MMMM DD"}}
+                <div class="col">
+                    <div class="feed-calendar">
+                        {{date format="MMMM DD"}}
+                    </div>
+                    <div>
+                        <span class="badge badge-danger">{{ tags autolink="false"}}</span>
+                    </div>
+
+
                 </div>
-                {{!-- Post main tag --}}
-                <div>
-                    <span class="badge badge-secondary">{{ tags autolink="false"}}</span>
-                </div>
+
                 {{!-- Post title --}}
-                <div>
+                <div class="col-6">
                     {{ title }}
                 </div>
                 {{!-- Post reading time --}}
-                <div>
+                <div class="col justify-content-end">
                     {{reading_time}}
-                </div>
-                {{!-- Icon arrow --}}
-                <div class="svgarrow">
-                                        <svg class="icon feed-icon">
+                    <svg class="icon feed-icon">
                         <use xlink:href="#chevron-right"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
                                 id="chevron-right">
                                 <path d="M11.453 22.107L17.56 16l-6.107-6.12L13.333 8l8 8-8 8-1.88-1.893z"></path>
                             </svg></use>
                     </svg>
                 </div>
+
             </article>
-            <hr>
+            <hr class="posthr">
         </a>
         {{/foreach}}
     </div>
