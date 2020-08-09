@@ -3,15 +3,15 @@
 
 :root {
     /* Colours */
-    --blue: #3eb0ef;
-    --green: #a4d037;
-    --purple: #ad26b4;
-    --yellow: #fecd35;
-    --red: #f05230;
-    --darkgrey: #15171A;
-    --midgrey: #738a94;
-    --lightgrey: #c5d2d9;
-    --whitegrey: #e5eff5;
+    --blue: #5E81AC;
+    --green: #A3BE8C;
+    --purple: #B48EAD;
+    --yellow: #EBCB8B;
+    --red: #BF616A;
+    --darkgrey: #2E3440;
+    --midgrey: #4C566A;
+    --lightgrey: #D8DEE9;
+    --whitegrey: #ECEFF4;
     --pink: #fa3a57;
     --brown: #a3821a;
     --darkmode: color(var(--darkgrey) l(+2%));
