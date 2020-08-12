@@ -1,0 +1,66 @@
+.feed {
+    -webkit-box-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: flex;
+    line-height: 1;
+    overflow: hidden;
+    padding: 0.8rem 0;
+    position: relative;
+}
+
+.feed-calendar {
+    color: #4C566A;
+    display: -webkit-box;
+    display: flex;
+    margin-right: 2rem;
+    white-space: nowrap;
+}
+
+a {
+    color: #2E3440;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.postlist {
+    color: #2E3440;
+    text-decoration: none;
+    -webkit-transition: background 1s;
+    /* For Safari 3.0 to 6.0 */
+    transition: background 1s;
+    /* For modern browsers */
+}
+
+.postlist:hover {
+    color: #2E3440;
+    text-decoration: none;
+    background: #D8DEE9;
+    font-weight: 600;
+}
+
+.icon {
+    height: 20px;
+    width: 20px;
+}
+
+.feed-icon {
+    color: #BF616A;
+    height: 16px;
+    right: 0;
+    width: 16px;
+}
+
+.posthr {
+    margin: 0;
+}
+
+.col {
+    display: flex;
+}
+.headercolor{
+    color: #4C566A;
+}
